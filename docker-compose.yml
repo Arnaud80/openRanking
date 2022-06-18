@@ -1,0 +1,14 @@
+version: '3.8'
+
+networks:
+  default:
+
+services:
+  db:
+    image: postgres:11.5-alpine
+    container_name: openRankingPostgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: Welcome
+      POSTGRES_DB: openRanking

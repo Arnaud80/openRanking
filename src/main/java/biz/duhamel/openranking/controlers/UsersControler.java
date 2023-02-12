@@ -51,6 +51,7 @@ public class UsersControler {
         }
     }
 
+    @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN') or hasRole('USER')")
     @GetMapping("user-ranking")
     public @ResponseBody List<User> getRanking() {
         return userRepository.getRanking();

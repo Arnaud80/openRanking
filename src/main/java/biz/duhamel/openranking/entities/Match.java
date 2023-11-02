@@ -1,9 +1,8 @@
-package biz.duhamel.openranking.models;
+package biz.duhamel.openranking.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.sql.Date;
 
 @Entity(name="matchs")

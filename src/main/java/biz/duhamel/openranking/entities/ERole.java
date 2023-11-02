@@ -1,4 +1,4 @@
-package biz.duhamel.openranking.models;
+package biz.duhamel.openranking.entities;
 
 public enum ERole {
     ROLE_USER,

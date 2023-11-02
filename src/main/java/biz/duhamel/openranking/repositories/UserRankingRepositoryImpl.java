@@ -1,12 +1,9 @@
 package biz.duhamel.openranking.repositories;
 
-import biz.duhamel.openranking.models.User;
-import org.springframework.beans.factory.annotation.Autowired;
+import biz.duhamel.openranking.entities.User;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.EntityManager;
-import javax.persistence.NoResultException;
 import java.util.List;
 
 @Repository

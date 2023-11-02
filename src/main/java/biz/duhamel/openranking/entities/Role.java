@@ -1,7 +1,7 @@
-package biz.duhamel.openranking.models;
+package biz.duhamel.openranking.entities;
 
-import javax.persistence.*;
-import java.io.Serializable;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "roles")

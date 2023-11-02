@@ -1,11 +1,10 @@
 package biz.duhamel.openranking.controlers;
 
 import biz.duhamel.openranking.exceptions.ControlerExceptionNotFound;
-import biz.duhamel.openranking.models.User;
+import biz.duhamel.openranking.entities.User;
 import biz.duhamel.openranking.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,7 +19,6 @@ public class UsersControler {
     private UserRepository userRepository;
 
     @GetMapping
-    @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN')")
     public List<User> list() {
         return userRepository.findAll();
     }
@@ -51,7 +49,6 @@ public class UsersControler {
         }
     }
 
-    @PreAuthorize("hasRole('MODERATOR') or hasRole('ADMIN') or hasRole('USER')")
     @GetMapping("user-ranking")
     public @ResponseBody List<User> getRanking() {
         return userRepository.getRanking();

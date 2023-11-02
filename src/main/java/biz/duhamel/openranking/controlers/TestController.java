@@ -1,9 +1,8 @@
 package biz.duhamel.openranking.controlers;
 
-import biz.duhamel.openranking.models.User;
+import biz.duhamel.openranking.entities.User;
 import biz.duhamel.openranking.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,12 +27,10 @@ public class TestController {
         return "User Content." + user.getEmail();
     }
     @GetMapping("/mod")
-    @PreAuthorize("hasRole('MODERATOR')")
     public String moderatorAccess() {
         return "Moderator Board.";
     }
     @GetMapping("/admin")
-    @PreAuthorize("hasRole('ADMIN')")
     public String adminAccess() {
         return "Admin Board.";
     }

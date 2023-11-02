@@ -1,6 +1,6 @@
 package biz.duhamel.openranking.repositories;
 
-import biz.duhamel.openranking.models.User;
+import biz.duhamel.openranking.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -14,4 +14,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     Boolean existsByEmail(String email);
     @Query("SELECT new users(u.userId, u.firstName, u.lastName, u.eloScore) FROM users u WHERE u.eloScore>0")
     List<User> getRanking();
+
+    /*@Query("SELECT new users(u.userId, u.firstName, u.lastName, u.eloScore) FROM users u WHERE u.username = :username")
+    public User getUserByUsername(@Param("username") String username);*/
 }

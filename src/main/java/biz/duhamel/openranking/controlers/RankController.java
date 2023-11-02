@@ -1,6 +1,6 @@
 package biz.duhamel.openranking.controlers;
 
-import biz.duhamel.openranking.models.User;
+import biz.duhamel.openranking.entities.User;
 import biz.duhamel.openranking.repositories.UserRankingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

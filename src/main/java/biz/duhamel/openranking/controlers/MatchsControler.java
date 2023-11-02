@@ -1,12 +1,11 @@
 package biz.duhamel.openranking.controlers;
 
 import biz.duhamel.openranking.exceptions.ControlerExceptionNotFound;
-import biz.duhamel.openranking.models.Match;
+import biz.duhamel.openranking.entities.Match;
 import biz.duhamel.openranking.repositories.MatchRepository;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
